@@ -1,0 +1,214 @@
+:root {
+  --background-dark: #1f1f1f;
+  --text-light: white;
+  --background-light: #ffffff;
+  --text-dark: #333;
+  --background-gray: #f0f0f0;
+  --highlight-color: #4caf50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.navbar {
+  background-color: transparent;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ddd;
+}
+
+.main-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main-content {
+  color: var(--text-light);
+}
+
+.main-content h1 {
+  font-size: 3em;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid var(--text-light);
+  animation: typing 5s steps(30, end), blink-caret .5s step-end infinite;
+  display: inline-block;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--text-light) }
+}
+
+.white-section {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.gray-section {
+  background-color: var(--background-gray);
+  color: var(--text-dark);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project {
+  background-color: var(--background-light);
+  padding: 20px;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project h3 {
+  margin-bottom: 10px;
+}
+
+.project-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--highlight-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.project-button:hover {
+  background-color: #45a049;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  background-color: var(--highlight-color);
+  height: 100%;
+}
+
+.contact-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-links li {
+  margin-bottom: 10px;
+}
+
+.contact-links li a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact-links li a:hover {
+  color: var(--background-dark);
+}
+
+footer {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar{
+    padding: 1rem;
+  }
+  .main-content h1 {
+      font-size: 2em;
+      white-space: normal;
+      width: auto;
+      border: none;
+      animation: none;
+  }
+
+  .project-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .container {
+      width: 95%;
+  }
+}
