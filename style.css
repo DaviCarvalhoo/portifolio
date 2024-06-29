@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--background-dark);
   color: var(--text-light);
   line-height: 1.6;
@@ -26,6 +26,7 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+
 
 h1, h2, h3 {
   text-align: center;
@@ -107,6 +108,7 @@ h1, h2, h3 {
   text-align: center;
 }
 
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -153,6 +155,9 @@ h1, h2, h3 {
   margin-bottom: 20px;
 }
 
+#skills h2{
+  padding: 1rem;
+}
 .progress-bar {
   background-color: #ddd;
   height: 20px;
@@ -176,13 +181,17 @@ h1, h2, h3 {
 
 .contact-links li a {
   text-decoration: none;
-  color: var(--text-dark);
+  color: #333333b6;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .contact-links li a:hover {
   color: var(--background-dark);
+}
+
+#contact h2{
+  padding: 1.5rem;
 }
 
 footer {
@@ -194,7 +203,7 @@ footer {
 
 @media (max-width: 768px) {
   .navbar{
-    padding: 1rem;
+    padding: 1rem 0.5rem 1rem 1rem;
   }
   .main-content h1 {
       font-size: 2em;
